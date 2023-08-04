@@ -1,33 +1,37 @@
-import { Carousel } from 'flowbite-react';
 
 export default function Events() {
     return (
         <main className="bg-[#fdf7fe] p-12">
             <div className="flex flex-col items-center justify-center">
-                <h1 className="text-3xl flex gap-3 items-center font-bold text-[#222222]"><span className="bg-[#631c6f] w-8 h-1 block">{" "}</span>EVENTS & WORKSHOP<span className="bg-[#631c6f] w-8 h-1 block">{" "}</span></h1>
-                <p className="mt-3"> IET-VIT conducts sessions targeted towards the development of STEM knowledge among the youth.</p>
+                <h1 className="text-3xl flex gap-3 items-center font-bold text-[#222222]"><span className="bg-[#631c6f] w-8 h-1 block">{" "}</span>Our SIGs<span className="bg-[#631c6f] w-8 h-1 block">{" "}</span></h1>
+                <p className="mt-3 text-[#222222]"> IET NITK consists of six different Special Interest Groups</p>
             </div>
-            <div className='w-[450px] h-[350px] m-auto mt-10'>
-                <Carousel
-                    slideInterval={5000}
-                    leftControl=" "
-                    rightControl=" "
-                >
-                    <img
-                        alt="..."
-                        src="https://images.unsplash.com/photo-1682685797332-e678a04f8a64?ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80"
-                    />
-                    <img
-                        alt="..."
-                        src="https://images.unsplash.com/photo-1690669249460-65a76daaf698?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1094&q=80"
-                    />
-                    <img
-                        alt="..."
-                        src="https://images.unsplash.com/photo-1682686581740-2c5f76eb86d1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxlZGl0b3JpYWwtZmVlZHwxNnx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=60"
-                    />
-                </Carousel>
+            <div className=" grid grid-cols-3 grid-rows-2 place-items-center gap-6 w-3/4 m-auto mt-14">
+                <div className="flex flex-col items-center justify-center">
+                    <img src="/cipher.webp" alt="cipher" className="h-[100px] mb-4" />
+                    <p className=" text-center text-[#222222]">Cipher SIG brings together people interested in Computer Science and Information Technology. </p>
+                </div>
+                <div className="flex flex-col items-center justify-center">
+                    <img src="/rovisp.webp" alt="rovisp" className="h-[100px] mb-4" />
+                    <p className=" text-center text-[#222222]">Rovisp SIG brings together people who are passionate about Electronics and Electrical Technology. </p>
+                </div>
+                <div className="flex flex-col items-center justify-center">
+                    <img src="/torsion.webp" alt="torsion" className="h-[100px] mb-4" />
+                    <p className=" text-center text-[#222222]">Torsion SIG brings together people interested in Mechanical, Civil, Chemical and Material Sciences. </p>
+                </div>
+                <div className="flex flex-col items-center justify-center">
+                    <img src="/venture.webp" alt="venture" className="h-[100px] mb-4" />
+                    <p className=" text-center text-[#222222]">We're interested in exploring the fields of finance, business and management. </p>
+                </div>
+                <div className="flex flex-col items-center justify-center">
+                    <img src="/inkheart.webp" alt="inkheart" className="h-[100px] mb-4" />
+                    <p className=" text-center text-[#222222]">Inkheart is our new Lit&Phil SIG for people who are passionate about literature, music etc </p>
+                </div>
+                <div className="flex flex-col items-center justify-center">
+                    <img src="/medium.webp" alt="medium" className="h-[100px] mb-4" />
+                    <p className=" text-center text-[#222222]">Medium SIG is dedicated to people interested in Media and Marketing. </p>
+                </div>
             </div>
-
         </main>
     )
 }
