@@ -1,5 +1,4 @@
-
-export default function Events() {
+export default function SIG() {
     return (
         <main className="bg-[#fdf7fe] p-12">
             <div className="flex flex-col items-center justify-center">

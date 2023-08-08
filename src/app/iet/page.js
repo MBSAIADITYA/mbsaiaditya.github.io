@@ -1,7 +1,8 @@
 "use client"
 
 import About from "@/components/about";
-import Events from "@/components/events";
+import SIG from "@/components/sig";
+import Footer from "@/components/footer";
 import Hero from "@/components/hero";
 
 
@@ -10,7 +11,8 @@ export default function Home() {
         <>
             <Hero />
             <About />
-            <Events />
+            <SIG />
+            <Footer />
         </>
     )
 }
