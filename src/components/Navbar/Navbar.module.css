@@ -1,0 +1,36 @@
+  .navbar {
+    background-color: white; 
+    padding: 15px 30px; 
+    font-family: 'Poppins', sans-serif; 
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
+  }
+  
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .navbarNav {
+    list-style: none;
+    display: flex;
+    gap: 30px; 
+    margin: 0;
+  }
+  
+  .navLink {
+    text-decoration: none;
+    color: black; 
+    font-weight: bold;
+    font-size: 18px; 
+    transition: color 0.3s ease, background-color 0.3s ease; 
+    padding: 10px 15px; 
+    border-radius: 5px; 
+  }
+  
+  .navLink:hover {
+    color: whitesmoke; 
+    background-color: purple; 
+    border: 2px solid white; 
+    box-sizing: border-box; 
+  }
