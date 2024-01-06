@@ -1,5 +1,5 @@
-import BlogCard from '../Blogs/Blogcard';
-import Navbar from '../Navbar/Navbar';
+import BlogCard from './Blogcard';
+import Navbar from "@/components/Navbar/Navbar";
 
 const BlogList = () => {
   return (
