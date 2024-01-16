@@ -1,11 +1,7 @@
-// App.js
-import React from 'react';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import ProjectsPage from './Components/ProjectsPage';
-import ProjectDetailsPage from './Components/ProjectDetailsPage';
+"use client";
+import ProjectDetailsPage from '@/components/ProjectDetailsPage';
 
-const App = () => {
-  const projects = [
+const projects = [
     {
       id: 1,
       sig: 'Cipher',
@@ -70,21 +66,11 @@ const App = () => {
     
     
   ];
-
-  return (
-    <Router>
-      <Routes>
-        <Route path="/projects" element={<ProjectsPage projects={projects} />} />
-        <Route
-          path="/projects/:id"
-          element={<ProjectDetailsPage projects={projects} />}
-
-
-          
-        />
-      </Routes>
-    </Router>
-  );
-};
-
-export default App;
+  
+  
+  export default function Page({ params }) {
+    const project = projects.find((project) => project.id.toString() === params.id);
+    return <div><ProjectDetailsPage project={project} /></div>;
+  }
+  
+  
