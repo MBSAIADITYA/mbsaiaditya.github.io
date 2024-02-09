@@ -39,14 +39,9 @@ const BlogList = () => {
   const [blogs, setBlogs] = useState([]);
 
   useEffect(() => {
-    // Fetch data from the server when the component mounts
     const fetchData = async () => {
       try {
-        const response = await fetch('https://tetragram.codered.cloud/api/v2/pages/?type=blog.BlogPage&fields=*',
-         {
-          method: "GET",
-          credentials: "include",
-        });
+        const response = await fetch('https://tetragram.codered.cloud/api/v2/pages/?type=blog.BlogPage&fields=*');
         const data = await response.json();
         console.log(data.items)
         setBlogs(data.items);
@@ -55,8 +50,8 @@ const BlogList = () => {
       }
     };
 
-    fetchData(); // Call the function to fetch data
-  }, []); // Empty dependency array to run the effect only once when the component mounts
+    fetchData(); 
+  }, []); 
 
   return (
     <div>
