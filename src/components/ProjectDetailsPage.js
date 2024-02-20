@@ -1,7 +1,8 @@
 import ReactMarkdown from "react-markdown";
-const ProjectDetailsPage = ({ project }) => {
+const ProjectDetailsPage = ( {project} ) => {
+  console.log();
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-white p-4 mt-4">
     <ReactMarkdown className='prose'>{project.project_body}</ReactMarkdown>
       <a href={project.github_url} className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-teal-600 rounded-lg hover:bg-teal-700 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-github mr-2" viewBox="0 0 16 16">
