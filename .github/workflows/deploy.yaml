@@ -36,3 +36,5 @@ jobs:
         git add .
         git commit -m "Deploy to mbsa branch"
         git push --force origin mbsa
+
+        
