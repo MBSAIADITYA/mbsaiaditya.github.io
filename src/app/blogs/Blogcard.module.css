@@ -4,7 +4,6 @@
   flex-direction: column;
   height: fit-content;
   align-items: center;
-  padding: 20px;
 }
 
 .bton {
@@ -34,6 +33,8 @@
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   display: flex;
   transition: transform 0.3s ease-in-out;
+  cursor: pointer;
+  height: 220px;
 }
 
 .blogCcard:hover {
@@ -50,7 +51,6 @@
   width: 40%; /* Adjusted width for image */
   height: auto;
   background-color: #ddd;
-  background-image: url('./blog.png');
   background-size: cover;
 }
 
@@ -63,6 +63,7 @@
 .para {
   margin-bottom: 15px;
   color: #555;
+  font-size: small;
 }
 
 .p:last-child {
