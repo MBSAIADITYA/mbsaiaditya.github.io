@@ -17,17 +17,16 @@ const ProjectsPage = ({ projects }) => {
   const currentProjects = projects.slice(indexOfFirstProject, indexOfLastProject);
 
   return (
-    
-   
-      <div className="min-h-screen bg-white">
-      <h2 className="text-4xl font-extrabold text-fuchsia-900">Projects</h2>
+
+
+    <div className='mt-8' >
       {currentProjects.map((project) => (
         <div className="row mb-3" key={project.id}>
           <div className="col-md-12">
-               <ProjectCard project={project} />
+            <ProjectCard project={project} />
           </div>
-          </div>
-        
+        </div>
+
       ))}
       <div className="pagination-container">
         <ReactPaginate

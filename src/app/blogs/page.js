@@ -1,35 +1,3 @@
-/*import BlogCard from './Blogcard';
-import Navbar from "@/components/Navbar/Navbar";
-
-const BlogList = () => {
-  return (
-    <div>
-     <Navbar />
-     <BlogCard 
-       title="React Blogging App"
-       blogger="John Doe"
-       Img="./blog.png"
-       blogLink="https://example.com/blog-post"
-       description="A simple React.js app for creating and managing blog posts. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-     />
-     <BlogCard 
-       title="React Blogging App"
-       blogger="John Doe"
-       blogLink="https://example.com/blog-post"
-       description="A simple React.js app for creating and managing blog posts. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-     />
-     <BlogCard 
-       title="React Blogging App"
-       blogger="John Doe"
-       blogLink="https://example.com/blog-post"
-       description="A simple React.js app for creating and managing blog posts. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-     />
-     </div>
-  );
-};
-
-export default BlogList;*/
-
 "use client"
 import React, { useEffect, useState } from 'react';
 import BlogCard from './Blogcard';
@@ -50,22 +18,21 @@ const BlogList = () => {
       }
     };
 
-    fetchData(); 
-  }, []); 
+    fetchData();
+  }, []);
 
   return (
-    <div>
-      <Navbar />
-      <h1>Blogs</h1>
+    <div> 
       {blogs.map((blog, index) => (
         <BlogCard
           key={index}
-          title={blog.title}
-          blogger={blog.blogger}
-          img={blog.img}
-          description={blog.blog_body}  
-          />
-))}
+          title={blog.blog_title}
+          authors={blog.blog_authors}
+          img={blog.blog_img_url}
+          description={blog.blog_description}
+          slug={blog.blog_slug}
+        />
+      ))}
     </div>
   );
 };
