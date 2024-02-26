@@ -1,9 +1,8 @@
-const withMDX = require('@next/mdx')();
-
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-    output: "export",
-    images: { unoptimized: true }
+    images: {
+    domains: ['tetragram.codered.cloud'],
+  },
 }
 
-module.exports = nextConfig;
+module.exports = nextConfig
