@@ -75,7 +75,7 @@ const BlogList = () => {
 
   return (
     <>
-      <div className='mt-4 py-4 p-5 md:p-10 md:py-4 grid gap-5 grid-cols-1 md:grid-cols-2 xl:p-20 xl:py-4 lg:grid-cols-3'>
+      <div className='mt-4 py-4 p-5 md:p-10 md:py-4 grid gap-5 grid-cols-1 md:grid-cols-2 xl:p-20 xl:py-4 lg:grid-cols-3 2xl:grid-cols-4'>
         {blogs.map((blog, index) => {
           return (
             <>

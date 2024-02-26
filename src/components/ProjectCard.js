@@ -8,7 +8,7 @@ const ProjectCard = ({ project }) => {
       <Link href={`/projects/${project.id}`} className='h-full'>
         <h6 className="mb-2 text-md font-semibold text-fuchsia-900">{project.project_sig}</h6>
         <h5 className="mb-2 text-2xl font-semibold tracking-tight text-black">{project.title}</h5>
-        <p className="mb-3 font-normal text-gray-700">({project.project_description.slice(0, 250)})</p>
+        <p className="mb-3 font-normal text-gray-700">({project.project_description.slice(0, 150) + "... see more"})</p>
       </Link>
       <a href={project.github_url} className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-teal-600 rounded-lg hover:bg-teal-700 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-github mr-2" viewBox="0 0 16 16">

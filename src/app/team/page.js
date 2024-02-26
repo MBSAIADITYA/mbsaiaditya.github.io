@@ -114,9 +114,9 @@ const Home = () => {
           {teamMembers.map((member, index) => (
             <div
               key={index}
-              className="profile-card relative w-64 h-140 bg-white p-6 border-4 border--500 rounded-lg shadow-lg transition-all duration-400 hover:border-0 hover:h-140 hover:w-140 text-center mb-8 mx-4 group"
+              className="profile-card overflow-hidden relative w-56 h-140 bg-white p-5 rounded-lg shadow-md border-[1px] transition-all duration-400 hover:border-0 hover:h-140 hover:w-140 text-center mb-8 mx-4 group"
             >
-              <div className="img w-32 h-32 mx-auto mb-4 relative group-hover:-translate-y-5 group-hover:scale-105">
+              <div className="z-10 w-24 h-24 mx-auto mb-4 relative group-hover:-translate-y-2 group-hover:ease-in-out transition-all group-hover:scale-110">
                 <Image
                   src="/man-avatar-clipart-illustration-free-png.webp"
                   alt="Profile"
@@ -146,6 +146,7 @@ const Home = () => {
                   />
                 </div>
               </div>
+              <div className='w-full skew-y-12 h-32 z-0 bg-purple-500/80 absolute -top-10 -right-0 '></div>
             </div>
           ))}
         </div>
