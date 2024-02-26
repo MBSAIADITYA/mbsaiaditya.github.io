@@ -1,7 +1,6 @@
 import styles from "./Navbar.module.css";
 import Image from 'next/image';
 import Link from "next/link";
-import Img from './logo-iet.png'
 
 export default function Navbar() {
     return (
@@ -9,7 +8,7 @@ export default function Navbar() {
             <nav className={styles.navbar}>
                 <div className={styles.container}>
                     <Link className={styles.navbarHeader} href={"/"} passHref >
-                        <Image src={Img} alt="logo" width={50} height={50} />
+                        <Image src="/logo-iet.png" alt="logo" width={50} height={50} />
                     </Link>
                     <div className={styles.navbarCollapse} id="navbarSupportedContent">
                         <ul className={styles.navbarNav}>
@@ -47,7 +46,6 @@ export default function Navbar() {
                     </div>
                 </div>
             </nav>
-
         </>
     );
 }

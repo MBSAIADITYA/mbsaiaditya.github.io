@@ -19,28 +19,18 @@ const ProjectsPage = ({ projects }) => {
   return (
 
 
-    <div className='mt-8' >
-      {currentProjects.map((project) => (
-        <div className="row mb-3" key={project.id}>
-          <div className="col-md-12">
-            <ProjectCard project={project} />
-          </div>
-        </div>
-
-      ))}
-      <div className="pagination-container">
-        <ReactPaginate
-          pageCount={Math.ceil(projects.length / projectsPerPage)}
-          pageRangeDisplayed={5}
-          marginPagesDisplayed={2}
-          onPageChange={handlePageClick}
-          containerClassName={'pagination'}
-          activeClassName={'active'}
-          initialPage={currentPage}
-          previousLabel={'Previous'}
-          nextLabel={'Next'}
-        />
-      </div>
+    <div className='mt-4 py-4 p-5 md:p-10 md:py-4 grid gap-5 grid-cols-1 md:grid-cols-2 xl:p-20 xl:py-4 lg:grid-cols-3' >
+      {currentProjects.map((project) => {
+        return (
+          <>
+            <div className="row h-full" key={project.id}>
+              <div className="col-md-12 h-full">
+                <ProjectCard project={project} />
+              </div>
+            </div>
+          </>
+        )
+      })}
     </div>
   );
 };

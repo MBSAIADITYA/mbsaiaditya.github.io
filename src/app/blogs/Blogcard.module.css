@@ -1,11 +1,3 @@
-/* BlogCard.module.css */
-.blogcontainer {
-  display: flex;
-  flex-direction: column;
-  height: fit-content;
-  align-items: center;
-}
-
 .bton {
   background-color: purple;
   width: fit-content;
@@ -24,9 +16,8 @@
 }
 
 .blogCard {
-  width: 80%;
+  width: 350px;
   height: fit-content;
-  margin: 20px 0;
   border: 1px solid #e0e0e0;
   border-radius: 8px;
   overflow: hidden;
@@ -34,7 +25,8 @@
   display: flex;
   transition: transform 0.3s ease-in-out;
   cursor: pointer;
-  height: 220px;
+  flex-direction: column;
+  height: 100%;
 }
 
 .blogCcard:hover {
@@ -43,25 +35,26 @@
 
 .blogDetails {
   padding: 20px;
-  width: 60%; /* Adjusted width for details */
+  width: 100%; /* Adjusted width for details */
   background-color: #f9f9f9;
+  height: 100%;
 }
 
 .blogImage {
-  width: 40%; /* Adjusted width for image */
+  width: 100%; /* Adjusted width for image */
   height: auto;
   background-color: #ddd;
   background-size: cover;
+  height: 200px;
 }
 
 .head {
   margin-bottom: 10px;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   color: #333;
 }
 
 .para {
-  margin-bottom: 15px;
   color: #555;
   font-size: small;
 }

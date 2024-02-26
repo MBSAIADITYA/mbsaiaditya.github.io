@@ -2,7 +2,7 @@
 "use client";
 import { useEffect, useState } from 'react';
 import ProjectsPage from "@/components/ProjectsPage";
-import {fetchProjects} from '@/components/api';
+import { fetchProjects } from '@/components/api';
 
 export default function Page() {
   const [projects, setProjects] = useState([]);
