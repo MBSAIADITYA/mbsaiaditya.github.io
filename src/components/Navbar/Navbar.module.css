@@ -5,6 +5,7 @@
   left: 0;
   background-color: transparent;
   z-index: var(--z-fixed);
+  backdrop-filter: blur(16px);
 }
 
 @media screen and (min-width: 1150px) {
@@ -107,10 +108,9 @@
     position: fixed;
     top: 0;
     background-color: hsla(0, 0%, 6%, 0.2);
-    backdrop-filter: blur(16px);
-    -webkit-backdrop-filter: blur(16px);
+    background: #f0edf1;
     width: 200px;
-    height: 100%;
+    height: 100vh;
     padding: 6rem 3rem 0;
     transition: right 0.4s;
   }

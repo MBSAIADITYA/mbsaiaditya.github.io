@@ -113,8 +113,6 @@ const Navbar = () => {
                         </li>
                     </ul>
                 )}
-
-
             </nav>
         </header>
     );
