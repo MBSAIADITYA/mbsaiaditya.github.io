@@ -1,16 +1,6 @@
 "use client"
 import React, { useEffect, useState } from 'react';
 import BlogCard from './Blogcard';
-import Footer from '@/components/footer';
-import Navbar from "@/components/Navbar/Navbar";
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from '@/components/ui/card';
 
 const BlogList = () => {
   const [blogs, setBlogs] = useState([]);

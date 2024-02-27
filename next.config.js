@@ -1,8 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-    images: {
-    domains: ['tetragram.codered.cloud'],
-  },
+    output: "export",
 }
 
 module.exports = nextConfig
