@@ -1,24 +1,7 @@
-// Page.js
-"use client";
-import { useEffect, useState } from 'react';
-import ProjectsPage from "@/components/ProjectsPage";
-import { fetchProjects } from '@/components/api';
+import ProjectList from "@/components/project/projectList";
 
-export default function Page() {
-  const [projects, setProjects] = useState([]);
-
-  useEffect(() => {
-    const fetchData = async () => {
-      const projectsData = await fetchProjects();
-      setProjects(projectsData);
-    };
-
-    fetchData();
-  }, []);
-
+export default function Project() {
   return (
-    <div>
-      <ProjectsPage projects={projects} />
-    </div>
-  );
+    <ProjectList />
+  )
 }
