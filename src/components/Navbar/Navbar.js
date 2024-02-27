@@ -62,15 +62,6 @@ const Navbar = () => {
                                     Projects
                                 </Link>
                             </li>
-                            <li className={styles.nav__item}>
-                                <Link
-                                    href="/location"
-                                    className={styles.nav__link}
-                                    onClick={closeMobileMenu}
-                                >
-                                    Location
-                                </Link>
-                            </li>
                         </ul>
                         <div className={styles.nav__close} id="nav-close" onClick={toggleMenu}>
                             <IoClose />

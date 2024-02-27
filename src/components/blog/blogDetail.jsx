@@ -6,6 +6,7 @@ import gfm from 'remark-gfm'
 import './styleblog.css'
 // Import Tailwind CSS classes
 import 'tailwindcss/tailwind.css';
+import jsonData from '../../../public/blog-response.json'
 
 // Component definition
 const BlogId = ({ params }) => {
@@ -18,8 +19,8 @@ const BlogId = ({ params }) => {
     const fetchData = async () => {
       try {
         // Fetch data from the API
-        const response = await fetch('/blog-response.json');
-        const data = await response.json();
+        // const response = await fetch('/blog-response.json');
+        const data = await jsonData;
         console.log("check", data);
         // Find the blog post with the matching id
         const matchingBlog = data.items.find(blog => blog?.blog_slug === params.blogid);

@@ -1,4 +1,5 @@
 import EventId from "@/components/event/eventDetail";
+import jsonData from '../../../../public/event-response.json'
 
 export default function EventDetail({ params }){
   return(
@@ -7,7 +8,7 @@ export default function EventDetail({ params }){
 }
 
 export async function generateStaticParams() {
-  const posts = await fetch('/event-response.json').then((res) => res.json())
+  const posts = jsonData
  
   return posts.items.map((post) => ({
     eventid: post.event_slug,

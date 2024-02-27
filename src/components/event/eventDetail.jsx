@@ -6,6 +6,7 @@ import ReactMarkdown from "react-markdown";
 import './styleblog.css'
 // Import Tailwind CSS classes
 import 'tailwindcss/tailwind.css';
+import jsonData from '../../../public/event-response.json'
 
 // Component definition
 const EventId = ({ params }) => {
@@ -18,8 +19,8 @@ const EventId = ({ params }) => {
     const fetchData = async () => {
       try {
         // Fetch data from the API
-        const response = await fetch('/event-response.json');
-        const data = await response.json();
+        // const response = await fetch('/event-response.json');
+        const data = await jsonData;
         // Find the blog post with the matching id
         const matchingBlog = data.items.find(blog => blog?.event_slug === params.eventid);
         // Update the state with the matching blog data

@@ -6,6 +6,7 @@ import ReactMarkdown from "react-markdown";
 import './styleblog.css'
 // Import Tailwind CSS classes
 import 'tailwindcss/tailwind.css';
+import jsonData from '../../../public/project-response.json'
 
 // Component definition
 const ProjectId = ({ params }) => {
@@ -18,8 +19,8 @@ const ProjectId = ({ params }) => {
     const fetchData = async () => {
       try {
         // Fetch data from the API
-        const response = await fetch('/project-response.json');
-        const data = await response.json();
+        // const response = await fetch('/project-response.json');
+        const data = await jsonData;
         console.log("check", data);
         // Find the blog post with the matching id
         const matchingBlog = data.items.find(project => project?.project_slug === params.projectid);
@@ -62,7 +63,7 @@ const ProjectId = ({ params }) => {
                     {projectData.project_description}
                   </div>
                   <div className="text-xl text-purple-200/90 font-medium font-sans mt-6 flex justify-between items-center">
-                    <span>{projectData.project_authors}</span> 
+                    <span>{projectData.project_authors}</span>
                   </div>
                 </div>
               </section>

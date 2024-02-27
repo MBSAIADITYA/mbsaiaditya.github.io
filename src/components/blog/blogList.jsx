@@ -1,6 +1,7 @@
 "use client"
 import React, { useEffect, useState } from 'react';
 import BlogCard from './Blogcard';
+import jsonData from '../../../public/blog-response.json';
 
 const BlogList = () => {
   const [blogs, setBlogs] = useState([]);
@@ -10,8 +11,7 @@ const BlogList = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch('/blog-response.json');
-        const data = await response.json();
+        const data = await jsonData;
         setBlogs(data.items);
       } catch (error) {
         console.error('Error fetching data:', error);
