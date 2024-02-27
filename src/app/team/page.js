@@ -107,51 +107,52 @@ const Home = () => {
 
   return (
     <>
-    <div className="p-0 m-0 box-border font-Poppins bg-white">
-      <br></br>
-      <div className="home-container bg-b5179e-700 min-h-screen flex items-center justify-center">
-        <div className="flex flex-wrap justify-center">
-          {teamMembers.map((member, index) => (
-            <div
-              key={index}
-              className="profile-card overflow-hidden relative w-56 h-140 bg-white p-5 rounded-lg shadow-md border-[1px] transition-all duration-400 hover:border-0 hover:h-140 hover:w-140 text-center mb-8 mx-4 group"
-            >
-              <div className="z-10 w-24 h-24 mx-auto mb-4 relative group-hover:-translate-y-2 group-hover:ease-in-out transition-all group-hover:scale-110">
-                <Image
-                  src="/man-avatar-clipart-illustration-free-png.webp"
-                  alt="Profile"
-                  width={128}
-                  height={128}
-                  className="object-fill w-full border-0 transition-all duration-400 rounded-full z-99"
-                />
-              </div>
-              <div className="caption">
-                <h3 className="text-xl font-semibold custom-text-color text-700 mb-1">{member.name}</h3>
-                <p className="text-sm font-semibold  mb-2">{member.role}</p>
-                <div className="social-links flex justify-center opacity-0 group-hover:opacity-100 transition-all duration-400">
-                  <FontAwesomeIcon
-                    style={{ width: '30px', height: '30px' }}
-                    className="mx-1 cursor-pointer text-gray-700 transition-all duration-400 group-hover:text-[#A9009D]-700"
-                    icon={faFacebook}
-                  />
-                  <FontAwesomeIcon
-                    style={{ width: '30px', height: '30px' }}
-                    className="mx-1 cursor-pointer text-gray-700 transition-all duration-400 group-hover:text-[#A9009D]-700"
-                    icon={faTwitter}
-                  />
-                  <FontAwesomeIcon
-                    style={{ width: '30px', height: '30px' }}
-                    className="mx-1 cursor-pointer text-gray-700 transition-all duration-400 group-hover:text-[#A9009D]-700"
-                    icon={faInstagram}
+      <div className="p-0 m-0 box-border font-Poppins">
+        <br></br>
+        <h1 className='text-center mb-4 text-3xl font-semibold'>Our Team</h1>
+        <div className="bg-b5179e-700 flex min-h-[70vh] justify-center">
+          <div className="flex flex-wrap justify-center">
+            {teamMembers.map((member, index) => (
+              <div
+                key={index}
+                className="profile-card overflow-hidden relative w-56 h-fit bg-white p-5 rounded-lg shadow-md border-[1px] transition-all duration-400 hover:border-0 hover:h-140 hover:w-140 text-center mb-8 mx-4 group"
+              >
+                <div className="z-10 w-24 h-24 mx-auto mb-4 relative group-hover:-translate-y-2 group-hover:ease-in-out transition-all group-hover:scale-110">
+                  <Image
+                    src="/man-avatar-clipart-illustration-free-png.webp"
+                    alt="Profile"
+                    width={128}
+                    height={128}
+                    className="object-fill w-full border-0 transition-all duration-400 rounded-full z-99"
                   />
                 </div>
+                <div className="caption">
+                  <h3 className="text-xl font-semibold custom-text-color text-700 mb-1">{member.name}</h3>
+                  <p className="text-sm font-semibold  mb-2">{member.role}</p>
+                  <div className="social-links flex justify-center opacity-0 group-hover:opacity-100 transition-all duration-400">
+                    <FontAwesomeIcon
+                      style={{ width: '30px', height: '30px' }}
+                      className="mx-1 cursor-pointer text-gray-700 transition-all duration-400 group-hover:text-[#A9009D]-700"
+                      icon={faFacebook}
+                    />
+                    <FontAwesomeIcon
+                      style={{ width: '30px', height: '30px' }}
+                      className="mx-1 cursor-pointer text-gray-700 transition-all duration-400 group-hover:text-[#A9009D]-700"
+                      icon={faTwitter}
+                    />
+                    <FontAwesomeIcon
+                      style={{ width: '30px', height: '30px' }}
+                      className="mx-1 cursor-pointer text-gray-700 transition-all duration-400 group-hover:text-[#A9009D]-700"
+                      icon={faInstagram}
+                    />
+                  </div>
+                </div>
+                <div className='w-full skew-y-12 h-32 z-0 bg-purple-500/80 absolute -top-10 -right-0 '></div>
               </div>
-              <div className='w-full skew-y-12 h-32 z-0 bg-purple-500/80 absolute -top-10 -right-0 '></div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
-      </div>
-    </div><Footer /></>
+      </div><Footer /></>
   );
 };
 
