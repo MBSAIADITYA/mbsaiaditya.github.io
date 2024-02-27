@@ -7,7 +7,7 @@ export default function About() {
             <section className="bg-[#280c33] bg-[url('/bg.png')] bg-cover h-full p-12">
                 <div className="flex flex-col items-center justify-center mt-2">
                     <h1 className=" text-white flex items-center gap-3 text-3xl font-bold"><span className="bg-[white] w-8 h-1 block">{" "}</span> ABOUT US<span className="bg-[white] w-8 h-1 block">{" "}</span></h1>
-                    <p className="text-white text-xl mt-2">We are a team of passionate programmers who believe in building a better world for everyone.</p>
+                    <p className="text-white text-center text-xl mt-2">We are a team of passionate programmers who believe in building a better world for everyone.</p>
                 </div>
                 <div className="flex flex-col items-center m-auto mt-10 max-w-6xl gap-11 ">
                     <div className="flex flex-col items-center bg-[#5c1670] rounded-lg shadow-xl sm:flex-row hover:bg-[#481457] w-full">
