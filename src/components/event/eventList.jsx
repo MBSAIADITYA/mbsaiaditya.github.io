@@ -10,7 +10,7 @@ const EventList = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch('https://tetragram.codered.cloud/api/v2/pages/?type=events.EventsPage&fields=*');
+        const response = await fetch('/event-response.json');
         const data = await response.json();
         setBlogs(data.items);
       } catch (error) {

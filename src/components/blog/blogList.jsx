@@ -10,7 +10,7 @@ const BlogList = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch('https://tetragram.codered.cloud/api/v2/pages/?type=blog.BlogPage&fields=*');
+        const response = await fetch('/blog-response.json');
         const data = await response.json();
         setBlogs(data.items);
       } catch (error) {

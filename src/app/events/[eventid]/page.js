@@ -7,7 +7,7 @@ export default function EventDetail({ params }){
 }
 
 export async function generateStaticParams() {
-  const posts = await fetch('https://tetragram.codered.cloud/api/v2/pages/?type=events.EventsPage&fields=*').then((res) => res.json())
+  const posts = await fetch('/event-response.json').then((res) => res.json())
  
   return posts.items.map((post) => ({
     eventid: post.event_slug,

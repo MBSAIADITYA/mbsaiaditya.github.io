@@ -18,7 +18,7 @@ const EventId = ({ params }) => {
     const fetchData = async () => {
       try {
         // Fetch data from the API
-        const response = await fetch('https://tetragram.codered.cloud/api/v2/pages/?type=events.EventsPage&fields=*');
+        const response = await fetch('/event-response.json');
         const data = await response.json();
         // Find the blog post with the matching id
         const matchingBlog = data.items.find(blog => blog?.event_slug === params.eventid);

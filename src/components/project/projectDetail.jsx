@@ -18,7 +18,7 @@ const ProjectId = ({ params }) => {
     const fetchData = async () => {
       try {
         // Fetch data from the API
-        const response = await fetch('https://tetragram.codered.cloud/api/v2/pages/?type=projects.ProjectsPage&fields=*');
+        const response = await fetch('/project-response.json');
         const data = await response.json();
         console.log("check", data);
         // Find the blog post with the matching id

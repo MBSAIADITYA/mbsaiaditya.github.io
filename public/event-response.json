@@ -1,0 +1,55 @@
+{
+  "meta": {
+    "total_count": 2
+  },
+  "items": [
+    {
+      "id": 10,
+      "meta": {
+        "type": "events.EventsPage",
+        "detail_url": "http://localhost/api/v2/pages/10/",
+        "html_url": "http://localhost/events/dare-to-design/",
+        "slug": "dare-to-design",
+        "show_in_menus": false,
+        "seo_title": "",
+        "search_description": "",
+        "first_published_at": "2024-01-29T15:24:26.781796Z",
+        "alias_of": null,
+        "locale": "en"
+      },
+      "title": "DARE TO DESIGN",
+      "event_title": "<p data-block-key=\"esubr\"><b>DARE TO DESIGN</b></p>",
+      "event_slug": "daretodesign",
+      "event_date": "2023-09-13",
+      "event_organizer": "IET NITK",
+      "event_location": "Google Meet",
+      "event_tags": "python, rust, ruby",
+      "event_img_url": "https://images.unsplash.com/photo-1577401159468-3bbc7ee440b5?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "event_body": "# Schedule\r\n\r\nFriday, 14th January 2022 - Knowledge Exchange Program on The Basics of Electronics(R,L,C) - 5:00 PM.\r\n\r\nSaturday, 22nd January 2022 - Competition - From 6 PM\r\n\r\n## General FAQ'S Regarding Event\r\n1. **Who’s eligible?**\r\n\r\n1st and 2nd year Undergraduates all over India.\r\n\r\n2. **Do we have to pay for registering?**\r\n\r\nNo, registration is absolutely free. \r\n\r\n3. **Are teams allowed to participate?**\r\n\r\nNo, it is an individual competition.\r\n\r\n4. **What are the perks of participating?**\r\n\r\n- The top 2 contestants get a chance to win prize money.\r\n\r\n- Top 3 participants will receive commendation certificates.\r\n\r\n5. **When and where?**\r\n\r\nThe KEP is scheduled on 14th January 2022 and the competition on 22st January 2022. It will be conducted virtually.\r\n\r\n6. **Where do I register for it?**\r\n\r\nRegistration link : [https://forms.gle/oAnDSa6jjQqa3SkQA](https://forms.gle/oAnDSa6jjQqa3SkQA)\r\n\r\n7. **What are the topics I need to be good at for Competition?**\r\n\r\n- Basics of R,L,C,RL,RC,RLC circuits and their transient analysis and Frequency Analysis.\r\n\r\n- KEP (Knowledge Exchange Program) on the above topics and practice questions will be provided to boost your confidence for the Competition.\r\n\r\n- More details about the competition will be provided a day before the competition.\r\n\r\n8. **Is Laptop Mandatory for Competition?**\r\n\r\n- LTSpice software will be used for competition. So a laptop will be mandatory.\r\n\r\n- We shall provide a tutorial on how to install and use it.\r\n\r\n9. **Is it mandatory to attend KEP?**\r\n\r\n- KEP is to help you understand the basics of R,L,C circuits and on how to use LTSpice software.\r\n\r\n- It's not mandatory but we recommend everyone to attend it.\r\n\r\n10. **Why there is week gap between KEP and Competition?**\r\n\r\n- After KEP, we are providing time for the registrants to dig deep into topics and understand them well.\r\n\r\n- We will also provide questions for practicing."
+    },
+    {
+      "id": 11,
+      "meta": {
+        "type": "events.EventsPage",
+        "detail_url": "http://localhost/api/v2/pages/11/",
+        "html_url": "http://localhost/events/inkfiesta/",
+        "slug": "inkfiesta",
+        "show_in_menus": false,
+        "seo_title": "",
+        "search_description": "",
+        "first_published_at": "2024-01-29T15:25:29.935217Z",
+        "alias_of": null,
+        "locale": "en"
+      },
+      "title": "INKFIESTA",
+      "event_title": "<p data-block-key=\"3lk34\"><b>INKFIESTA</b></p>",
+      "event_slug": "inkfiesta",
+      "event_date": "2026-01-08",
+      "event_organizer": "NITK",
+      "event_location": "NITK Main Building",
+      "event_tags": "webdev, css, html, js, python",
+      "event_img_url": "https://images.unsplash.com/photo-1577401159468-3bbc7ee440b5?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "event_body": "# VALOSTORM\r\n\r\nA fun-filled event to bring out the gamer in you and compete to be the best gamer out there. Register in teams of 5 or individually and showcase your gaming talent! Individual registrants will be teamed up with other individual registrants to form teams of 5.\r\n\r\nGame: **Valorant** - A 5v5 Character-based FPS Tactical shooter game\r\n\r\nMode: **Spike Rush** (first team to win 4 rounds wins)\r\n\r\nKnockout tournament (Winning team advances to the next round)\r\n\r\nHosting platform: Valorant ( Download link: [https://playvalorant.com/en-gb/](https://playvalorant.com/en-gb/) )\r\n\r\n**Are you up for the challenge? Registration Link** -[https://bit.ly/Valostorm](https://bit.ly/Valostorm)\r\n\r\n# SEIZE THE NIGHT\r\nSEIZE THE NIGHT is an event to discover and shine your hidden talent. We present you a stage where you can perform various things such as\r\n\r\n- Skit\r\n- Music\r\n- Stand-up\r\n- Story Telling\r\n- Poem Reciting and many more.\r\n\r\nYou need to fill out the registration form with your details and choose your performance. There will be a panel of judges who will score you according to your presentation, confidence and communication skills. So get ready to amaze everyone with your bag of tricks.\r\n\r\n**Registration Link** - [https://bit.ly/SeizeTheNt](https://bit.ly/SeizeTheNt)\r\n\r\n# DO I MATTER?\r\nWe will be talking about an introduction to one’s inner journey and what they can do on a regular basis to keep their mental health upright. You can read more about the organization here in the link - [https://www.chanshi.org/](https://www.chanshi.org/)\r\n\r\nThe event goes live on the 30th of January at 11 AM on the Inkheart Youtube Channel. Along with that, a meeting link will be shared, 30 mins prior to the event start.\r\n\r\n**Youtube Channel Link** - [https://bit.ly/InkheartYT](https://bit.ly/InkheartYT)\r\n\r\n**Do join us and have a fun-filled weekend!**"
+    }
+  ]
+}
