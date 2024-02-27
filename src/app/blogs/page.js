@@ -59,7 +59,7 @@ const BlogList = () => {
                   authors={blog.blog_authors}
                   img={blog.blog_img_url}
                   description={blog.blog_description}
-                  slug={blog.meta.slug}
+                  slug={blog.blog_slug}
                   date={blog.published_on}
                 />
               </>

@@ -1,6 +1,7 @@
 import ReactMarkdown from "react-markdown";
+
 const ProjectDetailsPage = ({ project }) => {
-  console.log();
+
   return (
     <div className="p-4 bg-white rounded-lg w-[80vw] m-auto my-8 py-10 px-10">
       <ReactMarkdown style={{width:"100%"}} className='prose'>{project.project_body}</ReactMarkdown>

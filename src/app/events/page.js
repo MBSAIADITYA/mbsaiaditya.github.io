@@ -49,8 +49,9 @@ const EventList = () => {
                   organizer={blog.event_organizer}
                   img="https://images.unsplash.com/photo-1549451371-64aa98a6f660?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                   description="A fun-filled event to bring out the gamer in you and compete to be the best gamer out there. Register in teams of 5 or individually and showcase your gaming talent! Individual registrants will be teamed up with other individual registrants to form teams of 5."
-                  slug={blog.meta.slug}
+                  slug={blog.event_slug}
                   date={blog.event_date}
+                  location={blog.event_location}
                 />
               </>
             )

@@ -22,7 +22,7 @@ const BlogId = ({ params }) => {
         const response = await fetch('https://tetragram.codered.cloud/api/v2/pages/?type=events.EventsPage&fields=*');
         const data = await response.json();
         // Find the blog post with the matching id
-        const matchingBlog = data.items.find(blog => blog?.meta.slug === params.eventid);
+        const matchingBlog = data.items.find(blog => blog?.event_slug === params.eventid);
         // Update the state with the matching blog data
         setEventData(matchingBlog);
 
@@ -48,7 +48,7 @@ const BlogId = ({ params }) => {
   return (
     <>
 
-      <div className="mt-14 pb-10 min-h-screen flex items-center justify-center">
+      <div className="mt-20 pb-10 min-h-screen flex items-center justify-center">
         <div className="w-full">
           {eventData ? (
             <div >
