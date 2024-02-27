@@ -17,7 +17,7 @@ const ProjectsPage = ({ projects }) => {
   const currentProjects = projects.slice(indexOfFirstProject, indexOfLastProject);
 
   return (
-    <main className='mt-14 min-h-[90vh]'>
+    <main className='mt-20 min-h-[90vh]'>
       <section className="w-full bg-[#461461]">
         <div className=" text-4xl py-16 flex justify-center text-white mx-auto w-4/5 md:max-w-full lg:max-w-screen-md 2xl:max-w-screen-lg">
           Events
