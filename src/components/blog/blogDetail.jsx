@@ -1,9 +1,8 @@
 "use client"
 
 import { useEffect, useState } from "react";
-import Navbar from "@/components/Navbar/Navbar";
-import Footer from "@/components/footer";
 import ReactMarkdown from "react-markdown";
+import gfm from 'remark-gfm'
 import './styleblog.css'
 // Import Tailwind CSS classes
 import 'tailwindcss/tailwind.css';
@@ -76,7 +75,7 @@ const BlogId = ({ params }) => {
                   </div>
                 </div>
               </section>
-              <ReactMarkdown className="prose mx-auto w-4/5 md:max-w-full lg:max-w-screen-md 2xl:max-w-screen-lg text-black">{blogData.blog_body}</ReactMarkdown>
+              <ReactMarkdown remarkPlugins={[gfm]} className="prose mx-auto w-4/5 md:max-w-full lg:max-w-screen-md 2xl:max-w-screen-lg text-black">{blogData.blog_body}</ReactMarkdown>
             </div>
           ) : (
             <p>Loading...</p>
