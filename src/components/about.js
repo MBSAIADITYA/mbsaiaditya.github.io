@@ -1,9 +1,9 @@
 export default function About() {
     return (
         <main className="flex flex-col w-full">
-            <section className="bg-[#faf3fd] py-3 flex gap-5 items-center justify-center bg-no-repeat">
+            {/* <section className="bg-[#faf3fd] py-3 flex gap-5 items-center justify-center bg-no-repeat">
                 <span>IET</span> <span>CodeBuddy</span>
-            </section>
+            </section> */}
             <section className="bg-[#280c33] bg-[url('/bg.png')] bg-cover h-full p-12">
                 <div className="flex flex-col items-center justify-center mt-2">
                     <h1 className=" text-white flex items-center gap-3 text-3xl font-bold"><span className="bg-[white] w-8 h-1 block">{" "}</span> ABOUT US<span className="bg-[white] w-8 h-1 block">{" "}</span></h1>

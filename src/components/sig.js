@@ -1,11 +1,11 @@
 export default function SIG() {
     return (
-        <main className="bg-[#fdf7fe] p-12">
+        <main className="bg-[#fdf7fe] p-14 px-4 sm:px-14">
             <div className="flex flex-col items-center justify-center">
                 <h1 className="text-3xl flex gap-3 items-center font-bold text-[#222222]"><span className="bg-[#631c6f] w-8 h-1 block">{" "}</span>Our SIGs<span className="bg-[#631c6f] w-8 h-1 block">{" "}</span></h1>
-                <p className="mt-3 text-[#222222]"> IET NITK consists of six different Special Interest Groups</p>
+                <p className="mt-3 text-[#222222] text-center"> IET NITK consists of six different Special Interest Groups</p>
             </div>
-            <div className=" grid grid-cols-3 grid-rows-2 place-items-center gap-6 w-3/4 m-auto mt-14">
+            <div className=" grid grid-cols-2 sm:grid-cols-3 grid-rows-2 place-items-center gap-6 w-full sm:w-3/4 m-auto mt-14">
                 <div className="flex flex-col items-center justify-center">
                     <img src="/cipher.webp" alt="cipher" className="h-[100px] mb-4" />
                     <p className=" text-center text-[#222222]">Cipher SIG brings together people interested in Computer Science and Information Technology. </p>

@@ -12,22 +12,19 @@ import 'tailwindcss/tailwind.css';
 const BlogId = ({ params }) => {
   console.log(params.blogid)
   // State to store the fetched data
-  const [blogData, setBlogData] = useState(null);
+  const [eventData, setEventData] = useState(null);
 
   // Effect to fetch data when the component mounts
   useEffect(() => {
     const fetchData = async () => {
       try {
         // Fetch data from the API
-        const response = await fetch('https://tetragram.codered.cloud/api/v2/pages/?type=blog.BlogPage&fields=*');
+        const response = await fetch('https://tetragram.codered.cloud/api/v2/pages/?type=events.EventsPage&fields=*');
         const data = await response.json();
-        console.log("check", data);
         // Find the blog post with the matching id
-        const matchingBlog = data.items.find(blog => blog?.meta.slug === params.blogid);
-        console.log("matchingBlog", data.items[0]);
+        const matchingBlog = data.items.find(blog => blog?.meta.slug === params.eventid);
         // Update the state with the matching blog data
-        setBlogData(matchingBlog);
-        console.log("blog :", matchingBlog.blog_img_url)
+        setEventData(matchingBlog);
 
       } catch (error) {
         console.error('Error fetching data:', error);
@@ -37,9 +34,9 @@ const BlogId = ({ params }) => {
     // Call the fetchData function
     fetchData();
   }, [params.blogid]); // Include params.id in the dependency array to refetch data when id changes
-  console.log(blogData?.blog_tags.split(","))
+  console.log(eventData?.event_tags.split(","))
 
-  let inputDate = blogData?.published_on;
+  let inputDate = eventData?.event_date;
   let dateObj = new Date(inputDate);
   let day = dateObj.getDate();
   let month = dateObj.toLocaleString('default', { month: 'short' });
@@ -53,12 +50,12 @@ const BlogId = ({ params }) => {
 
       <div className="mt-14 pb-10 min-h-screen flex items-center justify-center">
         <div className="w-full">
-          {blogData ? (
+          {eventData ? (
             <div >
               <section className="w-full bg-[#461461] mb-10">
-                <div className=" flex flex-col text-white py-6 mx-auto w-4/5 md:max-w-full lg:max-w-screen-md 2xl:max-w-screen-lg lg:pt-16">
+                <div className=" flex flex-col text-white py-6 mx-auto w-4/5 md:max-w-full lg:max-w-screen-md 2xl:max-w-screen-lg lg:pt-10">
                   <div className="flex flex-wrap gap-2">
-                    {blogData?.blog_tags.split(",").map((data, index) => {
+                    {eventData?.event_tags.split(",").map((data, index) => {
                       return (
                         <span key={index} className="px-2 py-1 bg-purple-600/40 rounded-full">{data}</span>
                       )
@@ -66,17 +63,17 @@ const BlogId = ({ params }) => {
                     )}
                   </div>
                   <div className="text-xl text-white font-bold font-sans mt-4">
-                    {blogData.title}
+                    {eventData.title}
                   </div>
-                  <div className="text-xl text-gray-300 font-thin font-sans mt-2">
-                    {blogData.blog_description}
+                  <div className="rounded-lg overflow-hidden w-[100%] mx-auto mt-6">
+                    <img src={eventData.event_img_url}/>
                   </div>
                   <div className="text-xl text-purple-200/90 font-medium font-sans mt-6 flex justify-between items-center">
-                    <span>{blogData.blog_authors}</span><span className=" border-l-4 pl-2 border-purple-200/90">{formattedDate}</span>
+                    <span>{eventData.event_organizer}</span><span className=" border-l-4 pl-2 border-purple-200/90">{formattedDate}</span>
                   </div>
                 </div>
               </section>
-              <ReactMarkdown className="prose mx-auto w-4/5 md:max-w-full lg:max-w-screen-md 2xl:max-w-screen-lg text-black">{blogData.blog_body}</ReactMarkdown>
+              <ReactMarkdown className="prose mx-auto w-4/5 md:max-w-full lg:max-w-screen-md 2xl:max-w-screen-lg text-black">{eventData.event_body}</ReactMarkdown>
             </div>
           ) : (
             <p>Loading...</p>

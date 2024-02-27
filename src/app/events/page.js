@@ -1,18 +1,8 @@
 "use client"
 import React, { useEffect, useState } from 'react';
 import BlogCard from './eventCard';
-import Footer from '@/components/footer';
-import Navbar from "@/components/Navbar/Navbar";
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from '@/components/ui/card';
 
-const BlogList = () => {
+const EventList = () => {
   const [blogs, setBlogs] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
   const blogsPerPage = 6;
@@ -43,25 +33,32 @@ const BlogList = () => {
 
   return (
     <>
-      <div className='mt-4 py-4 p-5 md:p-10 md:py-4 grid gap-5 grid-cols-1 md:grid-cols-2 xl:p-20 xl:py-4 lg:grid-cols-3 2xl:grid-cols-4'>
-        {blogs.map((blog, index) => {
-          return (
-            <>
-              <BlogCard
-                key={index}
-                title={blog.title}
-                organizer={blog.event_organizer}
-                img="https://images.unsplash.com/photo-1549451371-64aa98a6f660?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                description="A fun-filled event to bring out the gamer in you and compete to be the best gamer out there. Register in teams of 5 or individually and showcase your gaming talent! Individual registrants will be teamed up with other individual registrants to form teams of 5."
-                slug={blog.event_slug}
-                date={blog.event_date}
-              />
-            </>
-          )
-        })}
+      <div className='mt-14 min-h-[90vh]'>
+        <section className="w-full bg-[#461461]">
+          <div className=" text-4xl py-16 flex justify-center text-white mx-auto w-4/5 md:max-w-full lg:max-w-screen-md 2xl:max-w-screen-lg">
+            Events
+          </div>
+        </section>
+        <section className='py-6 p-5 md:p-8 grid justify-items-center gap-5 grid-cols-1 md:grid-cols-2 xl:px-20 lg:grid-cols-3 2xl:grid-cols-4 auto-rows-max'>
+          {blogs.map((blog, index) => {
+            return (
+              <>
+                <BlogCard
+                  key={index}
+                  title={blog.title}
+                  organizer={blog.event_organizer}
+                  img="https://images.unsplash.com/photo-1549451371-64aa98a6f660?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                  description="A fun-filled event to bring out the gamer in you and compete to be the best gamer out there. Register in teams of 5 or individually and showcase your gaming talent! Individual registrants will be teamed up with other individual registrants to form teams of 5."
+                  slug={blog.meta.slug}
+                  date={blog.event_date}
+                />
+              </>
+            )
+          })}
+        </section>
       </div>
     </>
   );
 };
 
-export default BlogList;
+export default EventList;

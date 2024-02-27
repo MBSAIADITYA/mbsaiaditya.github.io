@@ -107,7 +107,7 @@ const Home = () => {
 
   return (
     <>
-      <div className="p-0 m-0 box-border font-Poppins">
+      <div className="p-0 mt-14 m-0 box-border font-Poppins">
         <br></br>
         <h1 className='text-center mb-4 text-3xl font-semibold'>Our Team</h1>
         <div className="bg-b5179e-700 flex min-h-[70vh] justify-center">
@@ -152,7 +152,8 @@ const Home = () => {
             ))}
           </div>
         </div>
-      </div><Footer /></>
+      </div>
+      </>
   );
 };
 

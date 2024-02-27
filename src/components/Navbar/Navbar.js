@@ -77,10 +77,15 @@ const Navbar = () => {
                         </div>
                     </div>
                 ) : (
-                    <ul className={`${isMobile ? styles.nav__list : styles.nav__list__web}`}>
+                    <ul className={` ${isMobile ? styles.nav__list : styles.nav__list__web}`}>
                         <li className={styles.nav__item}>
                             <Link href="/" className={styles.nav__link} onClick={closeMobileMenu}>
                                 Home
+                            </Link>
+                        </li>
+                        <li className={styles.nav__item}>
+                            <Link href="/teams" className={styles.nav__link} onClick={closeMobileMenu}>
+                                Team
                             </Link>
                         </li>
                         <li className={styles.nav__item}>

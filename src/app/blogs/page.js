@@ -1,35 +1,3 @@
-/*import BlogCard from './Blogcard';
-import Navbar from "@/components/Navbar/Navbar";
-
-const BlogList = () => {
-  return (
-    <div>
-     <Navbar />
-     <BlogCard 
-       title="React Blogging App"
-       blogger="John Doe"
-       Img="./blog.png"
-       blogLink="https://example.com/blog-post"
-       description="A simple React.js app for creating and managing blog posts. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-     />
-     <BlogCard 
-       title="React Blogging App"
-       blogger="John Doe"
-       blogLink="https://example.com/blog-post"
-       description="A simple React.js app for creating and managing blog posts. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-     />
-     <BlogCard 
-       title="React Blogging App"
-       blogger="John Doe"
-       blogLink="https://example.com/blog-post"
-       description="A simple React.js app for creating and managing blog posts. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-     />
-     </div>
-  );
-};
-
-export default BlogList;*/
-
 "use client"
 import React, { useEffect, useState } from 'react';
 import BlogCard from './Blogcard';
@@ -75,22 +43,29 @@ const BlogList = () => {
 
   return (
     <>
-      <div className='mt-4 py-4 p-5 md:p-10 md:py-4 grid gap-5 grid-cols-1 md:grid-cols-2 xl:p-20 xl:py-4 lg:grid-cols-3 2xl:grid-cols-4'>
-        {blogs.map((blog, index) => {
-          return (
-            <>
-              <BlogCard
-                key={index}
-                title={blog.blog_title}
-                authors={blog.blog_authors}
-                img={blog.blog_img_url}
-                description={blog.blog_description}
-                slug={blog.blog_slug}
-                date={blog.published_on}
-              />
-            </>
-          )
-        })}
+      <div className='mt-14 min-h-[90vh]'>
+        <section className="w-full bg-[#461461]">
+          <div className=" text-4xl py-16 flex justify-center text-white mx-auto w-4/5 md:max-w-full lg:max-w-screen-md 2xl:max-w-screen-lg">
+            Blog
+          </div>
+        </section>
+        <section className='py-6 p-5 md:p-8 grid justify-items-center gap-5 grid-cols-1 md:grid-cols-2 xl:px-20 lg:grid-cols-3 2xl:grid-cols-4 auto-rows-max'>
+          {blogs.map((blog, index) => {
+            return (
+              <>
+                <BlogCard
+                  key={index}
+                  title={blog.blog_title}
+                  authors={blog.blog_authors}
+                  img={blog.blog_img_url}
+                  description={blog.blog_description}
+                  slug={blog.meta.slug}
+                  date={blog.published_on}
+                />
+              </>
+            )
+          })}
+        </section>
       </div>
     </>
   );
