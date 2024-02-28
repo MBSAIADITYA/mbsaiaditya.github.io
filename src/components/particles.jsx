@@ -3,6 +3,7 @@
 import { useEffect, useMemo, useState } from "react";
 import Particles, { initParticlesEngine } from "@tsparticles/react";
 import { loadFull } from "tsparticles";
+import { loadBasic } from "@tsparticles/basic";
 
 export default function ParticlesAnimation() {
 
@@ -16,7 +17,7 @@ export default function ParticlesAnimation() {
             //await loadAll(engine);
             //await loadFull(engine);
             await loadFull(engine);
-            //await loadBasic(engine);
+            // await loadBasic(engine);
         }).then(() => {
             setInit(true);
         });

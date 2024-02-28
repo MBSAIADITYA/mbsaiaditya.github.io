@@ -13,7 +13,7 @@ async function fetchDataAndSave() {
     const projectresponse = await fetch('https://tetragram.codered.cloud/api/v2/pages/?type=projects.ProjectsPage&fields=*');
     const projectdata = await projectresponse.json();
     fs.writeFileSync('./public/project-response.json', JSON.stringify(projectdata, null, 2));
-    console.log('API response saved to api-response.json');
+    console.log('API response saved to public folder!');
   } catch (error) {
     console.error('Error fetching data:', error);
   }

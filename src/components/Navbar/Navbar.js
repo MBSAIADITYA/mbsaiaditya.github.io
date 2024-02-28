@@ -62,7 +62,7 @@ const Navbar = () => {
                                     Projects
                                 </Link>
                             </li>
-                            <li className={styles.nav__item}>
+                            {/* <li className={styles.nav__item}>
                                 <Link
                                     href="/teams"
                                     className={styles.nav__link}
@@ -70,7 +70,7 @@ const Navbar = () => {
                                 >
                                     Team
                                 </Link>
-                            </li>
+                            </li> */}
                         </ul>
                         <div className={styles.nav__close} id="nav-close" onClick={toggleMenu}>
                             <IoClose />
@@ -83,11 +83,11 @@ const Navbar = () => {
                                 Home
                             </Link>
                         </li>
-                        <li className={styles.nav__item}>
+                        {/* <li className={styles.nav__item}>
                             <Link href="/teams" className={styles.nav__link} onClick={closeMobileMenu}>
                                 Team
                             </Link>
-                        </li>
+                        </li> */}
                         <li className={styles.nav__item}>
                             <Link href="/blogs" className={styles.nav__link} onClick={closeMobileMenu}>
                                 Blogs
