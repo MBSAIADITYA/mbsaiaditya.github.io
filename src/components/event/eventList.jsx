@@ -5,11 +5,13 @@ import jsonData from '../../../public/event-response.json'
 import ReactPaginate from 'react-paginate';
 import { IoIosArrowForward } from "react-icons/io";
 import { IoIosArrowBack } from "react-icons/io";
+import { useMediaQuery } from "react-responsive";
 
 const EventList = () => {
   const [events, setEvents] = useState([]);
   const [currentPage, setCurrentPage] = useState(0);
-  const eventsPerPage = 6;
+  const bigScreen = useMediaQuery({ minWidth: "1536px" });
+  const eventsPerPage = bigScreen ? 8 : 6;
 
   useEffect(() => {
     const fetchData = async () => {

@@ -5,11 +5,13 @@ import jsonData from '../../../public/blog-response.json';
 import ReactPaginate from 'react-paginate';
 import { IoIosArrowForward } from "react-icons/io";
 import { IoIosArrowBack } from "react-icons/io";
+import { useMediaQuery } from "react-responsive";
 
 const BlogList = () => {
   const [blogs, setBlogs] = useState([]);
   const [currentPage, setCurrentPage] = useState(0);
-  const blogsPerPage = 6;
+  const bigScreen = useMediaQuery({ minWidth: "1536px" });
+  const blogsPerPage = bigScreen ? 8 : 6;
 
   useEffect(() => {
     const fetchData = async () => {
@@ -32,9 +34,6 @@ const BlogList = () => {
   const indexOfFirstProject = indexOfLastProject - blogsPerPage;
   const currentBlogs = blogs.slice(indexOfFirstProject, indexOfLastProject);
   const pageCount = Math.ceil(blogs.length / 6);
-
-
-
 
   // Function to handle page change
   const handlePageChange = (newPage) => {

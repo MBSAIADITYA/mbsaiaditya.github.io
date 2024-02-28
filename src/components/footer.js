@@ -86,11 +86,11 @@ export default function Footer() {
                             class="mb-4 flex font-semibold uppercase justify-start">
                             Information
                         </h6>
-                        <p class="mb-4">
+                        {/* <p class="mb-4">
                             <a href="/teams" class=" text-neutral-200"
                             >Our Team</a
                             >
-                        </p>
+                        </p> */}
                         <p class="mb-4">
                             <a href="/projects" class=" text-neutral-200"
                             >Projects</a

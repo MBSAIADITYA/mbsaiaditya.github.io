@@ -5,10 +5,12 @@ import ReactPaginate from 'react-paginate';
 import './ProjectsPage.css'; // Import your CSS for styling
 import { IoIosArrowForward } from "react-icons/io";
 import { IoIosArrowBack } from "react-icons/io";
+import { useMediaQuery } from "react-responsive";
 
 const ProjectsPage = ({ projects }) => {
   const [currentPage, setCurrentPage] = useState(0);
-  const projectsPerPage = 6;
+  const bigScreen = useMediaQuery({ minWidth: "1536px" });
+  const projectsPerPage = bigScreen ? 8 : 6;
 
   const handlePageClick = (data) => {
     setCurrentPage(data.selected);
