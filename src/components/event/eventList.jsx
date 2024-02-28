@@ -11,7 +11,7 @@ const EventList = () => {
   const [events, setEvents] = useState([]);
   const [currentPage, setCurrentPage] = useState(0);
   const bigScreen = useMediaQuery({ minWidth: "1536px" });
-  const eventsPerPage = bigScreen ? 8 : 6;
+  const eventsPerPage = 8;
 
   useEffect(() => {
     const fetchData = async () => {
