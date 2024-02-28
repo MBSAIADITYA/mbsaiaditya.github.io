@@ -1,12 +1,12 @@
-import ReactCanvasNest from 'react-canvas-nest';
 import Typewriter from 'typewriter-effect';
+import Particles from './particles';
 
 export default function Hero() {
     return (
         <>
-            <main className=" flex justify-center items-center min-h-[80vh] md:min-h-[90vh] mt-14 sm:mt-0 flex-col ">
-                {/* <ReactCanvasNest className='canvasNest' config={{ pointColor: ' 86, 12, 125 ', count: 111 }} style={{ zIndex: 99 }} /> */}
-                <div className="flex items-center sm:justify-between w-full px-10 flex-col-reverse md:flex-row">
+            <main className=" flex relative justify-center items-center min-h-[80vh] md:min-h-[90vh] mt-14 sm:mt-0 flex-col ">
+                <Particles />
+                <div className="flex items-center sm:justify-between w-full px-10 flex-col-reverse md:flex-row z-10">
                     <div className="flex flex-col flex-auto w-full md:w-1/2 justify-center">
                         <h1 className="text-black text-4xl md:text-5xl font-bold">Your potential.<br /> Our passion.<br />
                         </h1>
