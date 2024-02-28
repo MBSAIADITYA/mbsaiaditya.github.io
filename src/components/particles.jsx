@@ -16,8 +16,8 @@ export default function ParticlesAnimation() {
             // starting from v2 you can add only the features you need reducing the bundle size
             //await loadAll(engine);
             //await loadFull(engine);
-            // await loadFull(engine);
-            await loadBasic(engine);
+            await loadFull(engine);
+            // await loadBasic(engine);
         }).then(() => {
             setInit(true);
         });
