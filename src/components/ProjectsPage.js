@@ -9,8 +9,8 @@ import { useMediaQuery } from "react-responsive";
 
 const ProjectsPage = ({ projects }) => {
   const [currentPage, setCurrentPage] = useState(0);
-  // const bigScreen = useMediaQuery({ minWidth: "1536px" });
-  const projectsPerPage = 8;
+  const bigScreen = useMediaQuery({ minWidth: "1536px" });
+  const projectsPerPage = bigScreen ? 8 : 6;
 
   const handlePageClick = (data) => {
     setCurrentPage(data.selected);
@@ -19,7 +19,7 @@ const ProjectsPage = ({ projects }) => {
   const indexOfLastProject = (currentPage + 1) * projectsPerPage;
   const indexOfFirstProject = indexOfLastProject - projectsPerPage;
   const currentProjects = projects.slice(indexOfFirstProject, indexOfLastProject);
-  const pageCount = Math.ceil(projects.length / 6);
+  const pageCount = Math.ceil(projects.length / projectsPerPage);
 
   return (
     <main className='mt-20 min-h-[90vh] relative'>

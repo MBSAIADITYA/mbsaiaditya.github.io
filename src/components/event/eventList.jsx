@@ -11,7 +11,7 @@ const EventList = () => {
   const [events, setEvents] = useState([]);
   const [currentPage, setCurrentPage] = useState(0);
   const bigScreen = useMediaQuery({ minWidth: "1536px" });
-  const eventsPerPage = 8;
+  const eventsPerPage = bigScreen ? 8 : 6;
 
   useEffect(() => {
     const fetchData = async () => {
@@ -30,7 +30,7 @@ const EventList = () => {
   const indexOfLastProject = (currentPage + 1) * eventsPerPage;
   const indexOfFirstProject = indexOfLastProject - eventsPerPage;
   const currentEvevnts = events.slice(indexOfFirstProject, indexOfLastProject);
-  const pageCount = Math.ceil(events.length / 6);
+  const pageCount = Math.ceil(events.length / eventsPerPage);
 
   const handlePageClick = (data) => {
     setCurrentPage(data.selected);

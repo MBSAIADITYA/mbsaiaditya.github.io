@@ -4,6 +4,7 @@ const nextConfig = {
     compiler: {
         removeConsole: true,
     },
+    swcMinify: false
 }
 
 module.exports = nextConfig
