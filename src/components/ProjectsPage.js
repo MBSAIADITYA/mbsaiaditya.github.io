@@ -1,5 +1,5 @@
 // ProjectsPage.js
-import React, { useState } from 'react';
+import React, { useState,useEffect } from 'react';
 import ProjectCard from './ProjectCard';
 import ReactPaginate from 'react-paginate';
 import './ProjectsPage.css'; // Import your CSS for styling
