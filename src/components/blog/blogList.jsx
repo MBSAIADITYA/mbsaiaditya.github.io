@@ -35,6 +35,11 @@ const BlogList = () => {
   const currentBlogs = blogs.slice(indexOfFirstProject, indexOfLastProject);
   const pageCount = Math.ceil(blogs.length / blogsPerPage);
 
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [currentPage]);
+
+
   return (
     <>
       <div className='mt-20 min-h-[90vh] relative'>

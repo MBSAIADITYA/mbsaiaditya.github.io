@@ -36,6 +36,10 @@ const EventList = () => {
     setCurrentPage(data.selected);
   };
 
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [currentPage]);
+
   return (
     <>
       <div className='mt-20 min-h-[90vh] relative'>
