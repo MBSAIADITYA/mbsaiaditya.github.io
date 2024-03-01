@@ -16,6 +16,10 @@ const ProjectsPage = ({ projects }) => {
     setCurrentPage(data.selected);
   };
 
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [currentPage]);
+
   const indexOfLastProject = (currentPage + 1) * projectsPerPage;
   const indexOfFirstProject = indexOfLastProject - projectsPerPage;
   const currentProjects = projects.slice(indexOfFirstProject, indexOfLastProject);

@@ -71,6 +71,15 @@ const Navbar = () => {
                                     Team
                                 </Link>
                             </li> */}
+                            <li className={styles.nav__item}>
+                                <Link
+                                    href="/help"
+                                    className={styles.nav__link}
+                                    onClick={closeMobileMenu}
+                                >
+                                    Contact Us
+                                </Link>
+                            </li>
                         </ul>
                         <div className={styles.nav__close} id="nav-close" onClick={toggleMenu}>
                             <IoClose />
@@ -109,6 +118,15 @@ const Navbar = () => {
                                 onClick={closeMobileMenu}
                             >
                                 Projects
+                            </Link>
+                        </li>
+                        <li className={styles.nav__item}>
+                            <Link
+                                href="/help"
+                                className={styles.nav__link}
+                                onClick={closeMobileMenu}
+                            >
+                                Contact Us
                             </Link>
                         </li>
                     </ul>
